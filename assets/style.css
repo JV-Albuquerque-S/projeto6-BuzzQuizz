@@ -1,0 +1,77 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAFAFA;
+}
+
+header{
+    width: 100%;
+    height: 69px;
+    background-color: #EC362D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+    font-size: 37px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.criaQuiz {
+    margin-top: 100px;
+    margin-bottom: 35px;
+    width: 340px;
+    height: 181px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px dashed #D5D5D5;
+    border-radius: 5px;
+}
+
+.criaQuiz p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #B9B9B9;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.criaQuiz button{
+    margin-bottom: 35px;
+    width: 151px;
+    height: 40px;
+    border: 1px dashed #EC362D;
+    border-radius: 50px;
+    background-color: #FAFAFA;
+    font-weight: 400;
+    font-size: 21px;
+    color: #EC362D;
+}
+
+.todosQuizzes h2{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/*.quizPronto{
+    width: 340px;
+    height: 181px;
+    background-color: cadetblue;
+    border-radius: 5px;
+    /*position: absolute;
+    position: relative;
+}*/
