@@ -3,6 +3,7 @@ body{
     background-color: #FAFAFA;
 }
 
+/*Topo da página*/
 header{
     width: 100%;
     height: 69px;
@@ -13,6 +14,7 @@ header{
     position: fixed;
     top: 0px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 h1{
@@ -21,10 +23,12 @@ h1{
     color: #FFFFFF;
 }
 
+/*Corpo da página*/
 main{
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .criação-de-quiz {
@@ -58,20 +62,60 @@ main{
     font-weight: 400;
     font-size: 21px;
     color: #EC362D;
+    cursor: pointer;
 }
 
-.todos-os-quizzes h2{
+.todos-os-quizzes{
+    margin-bottom: 15px;
+}
+
+.quizes-da-pagina{
+    position: relative;
+    margin-top: 72px;
+}
+
+.quizes-da-pagina h2{
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 700;
     color: #000000;
+    position: absolute;
+    left: 0px;
+    bottom: 1200px;
 }
 
-/*.quizes-pronto{
-    width: 340px;
-    height: 181px;
-    background-color: cadetblue;
-    border-radius: 5px;
-    /*position: absolute;
+.quizes-pronto{
     position: relative;
-}*/
+}
+
+.quiz-texto{
+    width: 301px;
+    height: 54px;
+    position: absolute;
+    bottom: 0px;
+    left: 18px;
+}
+
+.quizes-pronto p{
+    font-size: 19px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+@media (min-width: 1100px){
+    .quizes-da-pagina{
+        width: 1100px;
+        margin-left: 195px;
+        margin-right: 195px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .quizes-da-pagina h2{
+        bottom: 400px;
+    }
+
+    .quizes-pronto{
+        margin-right: 15px;
+    }
+}
