@@ -118,4 +118,9 @@ main{
     .quizes-pronto{
         margin-right: 15px;
     }
+
+    .criação-de-quiz{
+        width: 1050px;
+        margin-left: -45px;
+    }
 }
