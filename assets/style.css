@@ -86,6 +86,8 @@ main {
 
 .quizes-pronto {
   position: relative;
+  width: 340px;
+  height: 181px;
 }
 .quizes-pronto img {
   width: 340px;
