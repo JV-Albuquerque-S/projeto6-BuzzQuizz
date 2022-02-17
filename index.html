@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuzzQuiz</title>
-    <link rel="stylesheet" href="assets/reset.css">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
     <!--Topo da página-->
     <header>
-        <h1>BuzzQuiz</h1>
+      <h1>BuzzQuiz</h1>
     </header>
 
     <!--Corpo da página-->
     <main>
-        <article class="criação-de-quiz">
-            <p>Você não criou nenhum<br>quiz ainda :(</p>
-            <button onclick="criarQuiz()">Criar Quizz</button>
-        </article>
+      <article class="criação-de-quiz">
+        <p>Você não criou nenhum<br />quiz ainda :(</p>
+        <button onclick="criarQuiz()">Criar Quizz</button>
+      </article>
 
-        <section class="quizes-da-pagina">
-            <section class="todos-os-quizzes">
-                <h2>Todos os Quizzes</h2>
-                <article class="quizes-pronto">
-                    <img src="images/simpsons.png" alt="Imagens da animação 'Os Simpsons'">
-                    <div class="quiz-texto">
-                        <p>Acerte os personagens corretos dos Simpsons e prove seu amor!</p>
-                    </div>
-                </article>
-            </section>
+      <section class="quizes-da-pagina">
+        <h2>Todos os Quizzes</h2>
+        <!-- <section class="todos-os-quizzes">
+          <article class="quizes-pronto">
+            <img
+              src="images/simpsons.png"
+              alt="Imagens da animação 'Os Simpsons'"
+            />
+            <div class="quiz-texto">
+              <p>
+                Acerte os personagens corretos dos Simpsons e prove seu amor!
+              </p>
+            </div>
+          </article>
+        </section> -->
 
-            <section class="todos-os-quizzes">
-                <article class="quizes-pronto">
-                    <img src="images/preguiça.png" alt="Imagens de um bicho preguiça">
-                    <div class="quiz-texto">
-                        <p>O quão de boas você é?</p>
-                    </div>
-                </article>
-            </section>
+        <!-- <section class="todos-os-quizzes">
+          <article class="quizes-pronto">
+            <img src="images/preguiça.png" alt="Imagens de um bicho preguiça" />
+            <div class="quiz-texto">
+              <p>O quão de boas você é?</p>
+            </div>
+          </article>
+        </section>
 
-            <section class="todos-os-quizzes">
-                <article class="quizes-pronto">
-                    <img src="images/preguiça.png" alt="Imagens de um bicho preguiça">
-                    <div class="quiz-texto">
-                        <p>O quão de boas você é?</p>
-                    </div>
-                </article>
-            </section>
+        <section class="todos-os-quizzes">
+          <article class="quizes-pronto">
+            <img src="images/preguiça.png" alt="Imagens de um bicho preguiça" />
+            <div class="quiz-texto">
+              <p>O quão de boas você é?</p>
+            </div>
+          </article>
+        </section>
 
-            <section class="todos-os-quizzes">
-                <article class="quizes-pronto">
-                    <img src="images/preguiça.png" alt="Imagens de um bicho preguiça">
-                    <div class="quiz-texto">
-                        <p>O quão de boas você é?</p>
-                    </div>
-                </article>
-            </section>
-
-            <section class="todos-os-quizzes">
-                <article class="quizes-pronto">
-                    <img src="images/preguiça.png" alt="Imagens de um bicho preguiça">
-                    <div class="quiz-texto">
-                        <p>O quão de boas você é?</p>
-                    </div>
-                </article>
-            </section>
-
-            <section class="todos-os-quizzes">
-                <article class="quizes-pronto">
-                    <img src="images/preguiça.png" alt="Imagens de um bicho preguiça">
-                    <div class="quiz-texto">
-                        <p>O quão de boas você é?</p>
-                    </div>
-                </article>
-            </section>
-        </section>  
-    </main>
-    
-    <script src="assets/script.js"></script>
-</body>
-</html>
+        <section class="todos-os-quizzes">
+          <article class="quizes-pronto">
+            <img src="images/preguiça.png" alt="Imagens de um bicho preguiça" />
+            <div class="quiz-texto">
+              <p>O quão de boas você é?</p>
+            </div>
+          </article>
+        </section>
