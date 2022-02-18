@@ -7,6 +7,7 @@
     <title>BuzzQuiz</title>
     <link rel="stylesheet" href="assets/reset.css" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style-tela2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -22,15 +23,16 @@
     </header>
 
     <!--Corpo da página-->
-    <main>
+    <main class="tela-1 hidden">
       <article class="criação-de-quiz">
         <p>Você não criou nenhum<br />quiz ainda :(</p>
         <button onclick="criarQuiz()">Criar Quizz</button>
       </article>
 
+      <!--Tela 1-->
       <section class="quizes-da-pagina">
+        <h2>Todos os Quizzes</h2>
         <!-- <section class="todos-os-quizzes">
-                <h2>Todos os Quizzes</h2>
                 <article class="quizes-pronto">
                     <img src="images/simpsons.png" alt="Imagens da animação 'Os Simpsons'">
                     <div class="quiz-texto">
@@ -86,6 +88,125 @@
       </section>
     </main>
 
+    <!--Tela 2-->
+    <main class="tela-2">
+        <!--Capa (imagem e texto iniciais) do quiz-->
+        <div class="capa">
+            <div></div>
+            <img src="images/preguiça.png">
+            <p class="titulo">Curte umas cacetadas do Faustão?</p>
+        </div>
+        
+        <!--Modelo de titulo da questão-->
+        <section class="questao">
+            <div>
+                <p>pipipi popopo, alguma coisa aí meu parceiro</p>
+            </div>
+        </section>
+
+        <!--Modelo de alternativas-->
+        <section class="bloco-alternativas">
+            <section class="alternativas">
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+            </section>
+        </section>
+
+        <section class="questao">
+            <div>
+                <p>pipipi popopo, alguma coisa aí meu parceiro</p>
+            </div>
+        </section>
+
+        <section class="bloco-alternativas">
+            <section class="alternativas">
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+            </section>
+        </section>
+
+        <section class="questao">
+            <div>
+                <p>pipipi popopo, alguma coisa aí meu parceiro</p>
+            </div>
+        </section>
+
+        <section class="bloco-alternativas">
+            <section class="alternativas">
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+
+                <article class="uma-altern">
+                    <img src="images/preguiça.png">
+                    <p>nome da alternativa</p>
+                </article>
+            </section>
+        </section>
+
+        <!--Modelo de tela de resultados-->
+        <section class="resultado">
+            <div class="titulo-resultado">
+                <p>0% hein bicho, tu é um baita de um zé ruela!!!!!!!!!!!!!!!</p>
+            </div>
+            <img src="images/preguiça.png">
+            <p class="texto-resultado">Parabén, você é burrão, 0%, pelo amor de deus amigo...</p>
+            <button class="reset-quizz">
+                Reiniciar Quizz
+            </button>
+            <button class="home-page">
+                Voltar pra home
+            </button>
+        </section>
+
+    </main>
+
     <script src="assets/script.js"></script>
+    <script src="assets/script-tela2.js"></script>
   </body>
 </html>

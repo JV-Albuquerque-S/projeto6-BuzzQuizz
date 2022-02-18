@@ -7,7 +7,7 @@ function getInfosQuizzes() {
     anwser.data.forEach((data) => {
       document.querySelector(
         ".quizes-da-pagina"
-      ).innerHTML += `<section class="todos-os-quizzes" onclick="escolherQuizz(this)" id=${data.id}>
+      ).innerHTML += `<section class="todos-os-quizzes" onclick="escolherQuizz(this); responderQuizz(${data.id})" id=${data.id}>
       <article class="quizes-pronto">
         <img
           src=${data.image}
