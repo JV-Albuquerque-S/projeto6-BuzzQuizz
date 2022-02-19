@@ -1,3 +1,6 @@
+body{
+    background-color: #fcf8f8;
+}
 /*Capa (imagem e texto iniciais) do quiz*/
 .capa{
     width: 100%;
@@ -6,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 42px;
+    margin-bottom: 24px;
 }
 
 .capa div{
@@ -19,9 +22,9 @@
 
 .capa img{
     width: 100%;
+    height: 142px;
 }
 
-/*Título da questão*/
 .titulo{
     font-size: 19px;
     font-weight: 400;
@@ -30,6 +33,19 @@
     z-index: 2;
 }
 
+.fundo-branco{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    padding-top: 18px;
+    padding-bottom: 23px;
+}
+
+/*Título da questão*/
 .questao{
     display:flex;
     justify-content: center;
@@ -57,17 +73,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 69px;
 }
 
 .alternativas{
     width: 340px;
-    height: 300px;
-    margin-bottom: 69px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: blue;
 }
 
 /*Alternativa isolada*/
@@ -122,10 +134,15 @@
     font-size: 17px;
     font-weight: 700;
     color: #484848;
-    margin-bottom: 48px;
 }
 
 /*Botões pós resultado*/
+.botoes-resultado{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
 .reset-quizz{
     border: none;
     background-color: #EC362D;
@@ -146,4 +163,85 @@
     font-size: 18px;
     color: #818181;
     margin-bottom: 66px;
+}
+
+@media (min-width: 1100px) {
+    .capa{
+        margin-bottom: 70px;
+    }
+    
+    .capa img{
+        height: 227px;
+    }
+
+    .titulo{
+        font-size: 39px;
+    }
+
+    .corpo-quiz{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fundo-branco{
+        width: 759px;
+        margin-bottom: 42px;
+        padding-top: 28px;
+        padding-bottom: 36px;
+    }
+
+    .questao{
+        margin-bottom: 19px;
+    }
+
+    .questao div{
+        width: 688px;
+        height: 138px;
+    }
+
+    .questao p{
+        font-size: 23px;
+    }
+
+    .alternativas{
+        width: 688px;
+    }
+
+    .uma-altern{
+        width: 330px;
+    }
+
+    .uma-altern p{
+        font-size: 20px;
+    }
+
+    .resultado .titulo-resultado{
+        width: 727px;
+        margin-bottom: 18px;
+    }
+
+    .corpo-resultado{
+        display: flex;
+        margin-bottom: 70px;
+    }
+
+    .corpo-resultado img{
+        margin-right: 21px;
+        margin-left: -25px;
+    }
+
+    .reset-quizz{
+        width: 260px;
+        height: 52px;
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .home-page{
+        width: 220px;
+        height: 44px;
+        font-size: 21px;
+        margin-bottom: 85px;
+    }
 }
