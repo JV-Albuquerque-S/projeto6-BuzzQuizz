@@ -1,3 +1,245 @@
+button {
+  cursor: pointer;
+}
+
+.criação-de-quiz {
+  margin-top: 100px;
+  margin-bottom: 35px;
+  width: 340px;
+  height: 181px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px dashed #d5d5d5;
+  border-radius: 5px;
+}
+
+.criação-de-quiz p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #b9b9b9;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.criação-de-quiz button {
+  margin-bottom: 35px;
+  width: 151px;
+  height: 40px;
+  border: 1px dashed #ec362d;
+  border-radius: 50px;
+  background-color: #fafafa;
+  font-weight: 400;
+  font-size: 21px;
+  color: #ec362d;
+  cursor: pointer;
+}
+
+.todos-os-quizzes {
+  margin-bottom: 15px;
+}
+
+.quizes-da-pagina {
+  position: relative;
+  margin-top: 72px;
+}
+
+.quizes-da-pagina h2 {
+  /*margin-bottom: 15px;*/
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  position: absolute;
+  left: 0px;
+  top: -40px;
+}
+
+.quizes-pronto {
+  position: relative;
+  width: 340px;
+  height: 181px;
+}
+.quizes-pronto img {
+  width: 340px;
+  height: 181px;
+  /*background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%), url(image.png);*/
+  border-radius: 5px;
+}
+
+.quiz-texto {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 65.1%,
+    #000000 100%
+  );
+  width: 340px;
+  height: 54px;
+  position: absolute;
+  bottom: 0px;
+}
+.quiz-texto p {
+  padding-left: 17px;
+}
+
+.quizes-pronto p {
+  font-size: 19px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.criando-quizzes {
+  position: absolute;
+  top: 140px;
+  left: 33%;
+}
+
+.criando-quizzes span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 27px;
+}
+.pirmeira-tela-criação-quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primeiro-form-quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.primeiro-form-quiz input {
+  margin-bottom: 9px;
+  width: 564px;
+  height: 46px;
+
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 19px;
+  padding: 23px;
+}
+.primeiro-form-quiz input::placeholder {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 22px;
+
+  color: #bababa;
+}
+.primeiro-form-quiz input:focus {
+  outline: none;
+}
+.primeiro-form-quiz button {
+  width: 368.86px;
+  height: 54px;
+
+  margin-top: 109px;
+
+  background: #ec362d;
+  border-radius: 15px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+
+  color: #fff5f4;
+  border: none;
+  outline: none;
+}
+.primeira-pergunta,
+.resposta-correta,
+.respostas-incorretas {
+  display: flex;
+  flex-direction: column;
+
+  width: 564px;
+  height: 46px;
+}
+.criando-o-quiz-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.perguntas {
+  display: flex;
+  flex-direction: column;
+}
+.esconder-pergunta {
+  display: flex;
+  flex-direction: column;
+}
+.perguntas img {
+  margin-left: 439px;
+}
+.criando-o-quiz-form input {
+  margin-bottom: 9px;
+  width: 564px;
+  height: 46px;
+
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 19px;
+  padding: 23px;
+}
+.criando-o-quiz-form input:focus {
+  outline: none;
+}
+.criando-o-quiz-form ::placeholder {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 22px;
+
+  color: #bababa;
+}
+.criando-o-quiz-form span {
+  margin-top: 28px;
+  margin-bottom: 17px;
+}
+
+.recolhido {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+.button-forms {
+  width: 368.86px;
+  height: 54px;
+
+  margin-top: 109px;
+
+  background: #ec362d;
+  border-radius: 15px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+
+  color: #fff5f4;
+  border: none;
+  outline: none;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: #fafafa;

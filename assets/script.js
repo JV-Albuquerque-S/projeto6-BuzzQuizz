@@ -7,7 +7,7 @@ function getInfosQuizzes() {
     anwser.data.forEach((data) => {
       document.querySelector(
         ".quizes-da-pagina"
-      ).innerHTML += `<section class="todos-os-quizzes" onclick="escolherQuizz(this); responderQuizz(${data.id})" id=${data.id}>
+      ).innerHTML += `<section class="todos-os-quizzes" onclick="responderQuizz(${data.id})">
       <article class="quizes-pronto">
         <img
           src=${data.image}
@@ -24,11 +24,8 @@ function getInfosQuizzes() {
   });
 }
 
-function escolherQuizz(quizEscolhido) {
-  console.log(quizEscolhido.attributes.id.value);
-}
-
 function responderQuizz(quizzID) {
+  document.querySelector(".quizes-da-pagina").innerHTML = ``;
   //Como mudar a cor pelo CSS
   // let ab = document.querySelector('.questao');
   // ab.style.cssText = 'background-color: blue';
@@ -65,14 +62,10 @@ function selecAltern(alternativa, finalizador) {
       quests_certas++;
     }
     alternativa.classList.remove("opaco");
-    console.log("acertos : " + acerto);
-    console.log(quests_certas);
-    console.log("marcadas: " + marcadas);
   }
 }
 
 function mostraQuizz(resposta) {
-  console.log(resposta.data);
   const capa = document.querySelector(".capa");
   capa.innerHTML = `
   <img src="${resposta.data.image}">
@@ -241,4 +234,164 @@ function mostraQuestoes(questao) {
     title_color[k].style.cssText = `background-color: ${questao.color}`;
   }
 }
+function pegarPrimeirasInfosForm() {
+  let tituloValue = document.getElementById("tituloQuiz").value;
+  let urlQuiz = document.getElementById("urlQuiz").value;
+  let quantidadePerguntasValue = document.getElementById(
+    "quantidadePerguntasQuiz"
+  ).value;
+  let niveisQuiz = document.getElementById("niveisQuiz").value;
+
+  if (tituloValue.length < 20 || tituloValue.length > 65) {
+    return alert("quantidade de caracteres invalida");
+  } else {
+    if (quantidadePerguntasValue < 3) {
+      return alert("quantidade de perguntas invalida");
+    } else {
+      if (niveisQuiz < 2) {
+        return alert("quantidade minima de niveis invalida");
+      } else {
+        if (
+          /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/.test(
+            urlQuiz
+          ) === false
+        ) {
+          return alert("insira uma URL válida");
+        } else {
+          let dataQUiz = [
+            tituloValue,
+            urlQuiz,
+            quantidadePerguntasValue,
+            niveisQuiz,
+          ];
+          segundaTelaFormsQuiz(dataQUiz);
+        }
+      }
+    }
+  }
+}
+function criarQuiz() {
+  document.querySelector(".capa");
+
+  document.querySelector(".corpo-quiz").innerHTML = "";
+  document.querySelector(".tela-1").innerHTML = "";
+  document.querySelector(".tela-2").innerHTML = "";
+  /* document.querySelector(".criação-de-quiz").innerHTML = ""; */
+
+  document.querySelector(
+    ".tela-1"
+  ).innerHTML += `<section class="criando-quizzes">
+  <div class="pirmeira-tela-criação-quiz">
+    <span>Comece pelo começo</span>
+    <div class="primeiro-form-quiz">
+      <input
+        type="text"
+        placeholder="Título do seu quizz"
+        id="tituloQuiz"
+      />
+      <input
+        type="text"
+        placeholder="URL da imagem do seu quizz"
+        id="urlQuiz"
+      />
+      <input
+        type="text"
+        placeholder="Quantidade de perguntas do quizz"
+        id="quantidadePerguntasQuiz"
+      />
+      <input
+        type="text"
+        placeholder="Quantidade de níveis do quizz"
+        id="niveisQuiz"
+      />
+
+      <button onclick="pegarPrimeirasInfosForm()">
+        Prosseguir pra criar perguntas
+      </button>
+    </div>
+  </div>
+  </section>`;
+}
+function segundaTelaFormsQuiz(quizData) {
+  document.querySelector(
+    ".criando-quizzes"
+  ).innerHTML = `<div class="criando-o-quiz-form">
+  <span>Crie suas perguntas</span>
+
+  <div class="perguntas">
+  <span>Pergunta 1 <img class="hidden" src="images/Vector.svg" alt="" onclick="mostrarPerguntasEscondidas(this)"></span>
+    <div class="esconder-pergunta ">
+    
+    <input type="text" placeholder="Texto da pergunta" />
+    <input type="text" placeholder="Cor de fundo da pergunta" />
+  
+    <span>Resposta correta</span>
+    <input type="text" placeholder="Resposta correta" /><input
+      type="text"
+      placeholder="URL da imagem"
+    />
+  
+    <span>Respostas Incorretas</span>
+    <input type="text" placeholder="Resposta incorreta 1" />
+    <input type="text" placeholder="URL da imagem 1" />
+    <input type="text" placeholder="Resposta incorreta 2" />
+    <input type="text" placeholder="URL da imagem 2" />
+    <input type="text" placeholder="Resposta incorreta 3" />
+    <input type="text" placeholder="URL da imagem 3" /></div>
+  </div>
+
+
+  
+`;
+
+  for (let i = 2; i <= quizData[2]; i++) {
+    document.querySelector(
+      ".criando-o-quiz-form"
+    ).innerHTML += `<div class="perguntas "> 
+  <span>Pergunta ${i} <img class="" src="images/Vector.svg" alt="" onclick="mostrarPerguntasEscondidas(this)"></span>
+
+  <div class="esconder-pergunta recolhido">
+  <input type="text" placeholder="Texto da pergunta" />
+  <input type="text" placeholder="Cor de fundo da pergunta" />
+
+  <span>Resposta correta</span>
+  <input type="text" placeholder="Resposta correta" /><input
+    type="text"
+    placeholder="URL da imagem"
+  />
+
+  <span>Respostas Incorretas</span>
+  <input type="text" placeholder="Resposta incorreta 1" />
+  <input type="text" placeholder="URL da imagem 1" />
+  <input type="text" placeholder="Resposta incorreta 2" />
+  <input type="text" placeholder="URL da imagem 2" />
+  <input type="text" placeholder="Resposta incorreta 3" />
+  <input type="text" placeholder="URL da imagem 3" />
+</div>
+</div>`;
+  }
+  document.querySelector(
+    ".criando-quizzes"
+  ).innerHTML += `<button onclick="pegarPrimeirasInfosForm()" class="button-forms">
+              Prosseguir pra criar perguntas
+            </button>`;
+}
+
+function mostrarPerguntasEscondidas(data) {
+  let allQuestions = document.querySelectorAll(".esconder-pergunta");
+  for (let i = 0; i < allQuestions.length; i++) {
+    allQuestions[i].classList.add("recolhido");
+  }
+
+  let allHidden = document.querySelectorAll(".hidden");
+
+  for (let i = 0; i < allHidden.length; i++) {
+    allHidden[i].classList.remove("hidden");
+  }
+  data.classList.add("hidden");
+  data.parentNode.parentNode
+    .querySelector(".esconder-pergunta")
+    .classList.remove("recolhido");
+}
+
 getInfosQuizzes();
