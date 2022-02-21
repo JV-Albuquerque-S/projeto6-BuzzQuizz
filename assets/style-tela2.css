@@ -58,7 +58,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 
 .questao p{
@@ -83,6 +82,10 @@ body{
 }
 
 /*Alternativa isolada*/
+.opaco{
+    opacity: 0.3;
+}
+
 .uma-altern{
     width: 163px;
     margin-bottom: 20px;
@@ -90,6 +93,7 @@ body{
 
 .uma-altern img{
     width: 100%;
+    height: 102px;
     margin-bottom: 5px;
 }
 
@@ -210,6 +214,10 @@ align-items: center;
 
     .uma-altern{
         width: 330px;
+    }
+
+    .uma-altern img{
+        height: 175px;
     }
 
     .uma-altern p{
